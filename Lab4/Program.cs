@@ -11,8 +11,8 @@ namespace Lab4
             Vector v3 = new Vector(7.9f, 8.4f, 9.2f);
            
             Console.WriteLine("Ваш вектор v1: " + v1.DisplayVector());
-            Console.WriteLine("Ваш вектор v1: " + v2.DisplayVector());
-            Console.WriteLine("Ваш вектор v1: " + v3.DisplayVector());
+            Console.WriteLine("Ваш вектор v2: " + v2.DisplayVector());
+            Console.WriteLine("Ваш вектор v3: " + v3.DisplayVector());
 
             //(a+b) x c. "x" Было понято как скалярное произведение %
             float r = (v1 + v2) % v3;

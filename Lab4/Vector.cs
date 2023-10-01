@@ -40,8 +40,10 @@ namespace Lab4
         }
         public static Vector operator *(Vector coordinate1, Vector coordinate2)
         {
-            return new Vector(coordinate1.X * coordinate2.X, coordinate1.Y * coordinate2.Y, coordinate1.Z * coordinate2.Z);
-
+            float resultX = coordinate1.Y * coordinate2.Z - coordinate1.Z * coordinate2.Y;
+            float resultY = coordinate1.Z * coordinate2.X - coordinate1.X * coordinate2.Z;
+            float resultZ = coordinate1.X * coordinate2.Y - coordinate1.Y * coordinate2.X;
+            return new Vector(resultX, resultY, resultZ);
         }
 
     }
