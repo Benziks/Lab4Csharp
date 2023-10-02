@@ -31,21 +31,21 @@ namespace Lab4
             return Math.Sqrt(X * X + Y * Y + Z * Z);
         }
         
-        public static Vector operator +(Vector coordinate1, Vector coordinate2)
+        public static Vector operator +(Vector vector1, Vector vector2)
         {
-            return new Vector(coordinate1.X + coordinate2.X, coordinate1.Y + coordinate2.Y, coordinate1.Z + coordinate2.Z);
+            return new Vector(vector1.X + vector2.X, vector1.Y + vector2.Y, vector1.Z + vector2.Z);
         }
         //Перегрузка оператора(%) скалярное произведение векторов
-        public static float operator %(Vector coordinate1, Vector coordinate2)
+        public static float operator %(Vector vector1, Vector vector2)
         {
-            return coordinate1.X * coordinate2.X + coordinate1.Y * coordinate2.Y + coordinate1.Z * coordinate2.Z;
+            return vector1.X * vector2.X + vector1.Y * vector2.Y + vector1.Z * vector2.Z;
         }
         //Перегрузка оператора(*) векторное произведение векторов
-        public static Vector operator *(Vector coordinate1, Vector coordinate2)
+        public static Vector operator *(Vector vector1, Vector vector2)
         {
-            float resultX = coordinate1.Y * coordinate2.Z - coordinate1.Z * coordinate2.Y;
-            float resultY = coordinate1.Z * coordinate2.X - coordinate1.X * coordinate2.Z;
-            float resultZ = coordinate1.X * coordinate2.Y - coordinate1.Y * coordinate2.X;
+            float resultX = vector1.Y * vector2.Z - vector1.Z * vector2.Y;
+            float resultY = vector1.Z * vector2.X - vector1.X * vector2.Z;
+            float resultZ = vector1.X * vector2.Y - vector1.Y * vector2.X;
             return new Vector(resultX, resultY, resultZ);
         }
 
