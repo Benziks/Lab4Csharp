@@ -25,19 +25,22 @@ namespace Lab4
             return X + " " + Y + " " + Z;
         }
 
-        
-        public double VectorLength()
+        //Вычисление длины вектора
+        public double Length()
         {
             return Math.Sqrt(X * X + Y * Y + Z * Z);
         }
+        
         public static Vector operator +(Vector coordinate1, Vector coordinate2)
         {
             return new Vector(coordinate1.X + coordinate2.X, coordinate1.Y + coordinate2.Y, coordinate1.Z + coordinate2.Z);
         }
+        //Перегрузка оператора(%) скалярное произведение векторов
         public static float operator %(Vector coordinate1, Vector coordinate2)
         {
             return coordinate1.X * coordinate2.X + coordinate1.Y * coordinate2.Y + coordinate1.Z * coordinate2.Z;
         }
+        //Перегрузка оператора(*) векторное произведение векторов
         public static Vector operator *(Vector coordinate1, Vector coordinate2)
         {
             float resultX = coordinate1.Y * coordinate2.Z - coordinate1.Z * coordinate2.Y;
